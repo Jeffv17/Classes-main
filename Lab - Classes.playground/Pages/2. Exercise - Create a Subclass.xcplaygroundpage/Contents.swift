@@ -26,13 +26,20 @@ class Spaceship {
 /*:
  Define a new class `Fighter` that inherits from `Spaceship`. Add a variable property `weapon` that defaults to an empty string and a variable property `remainingFirePower` that defaults to 5.
  */
-
+class fighter: Spaceship{
+    var weapon: String = ""
+    var remainingFirePower = 5
+}
 
 /*:
  Create a new instance of `Fighter` called `destroyer`. A `Fighter` will be able to shoot incoming objects to avoid colliding with them. After initialization, set `weapon` to "Laser" and `remainingFirePower` to 10. Note that since `Fighter` inherits from `Spaceship`, it also has properties for `name`, `health`, and `position`, and has methods for `moveLeft()`, `moveRight()`, and `wasHit()` even though you did not specifically add them to the declaration of `Fighter`. Knowing that, set `name` to "Destroyer," print `position`, then call `moveRight()` and print `position` again.
  */
-
-
+var destroyer = fighter()
+destroyer.weapon = "Laser"
+destroyer.remainingFirePower = 10
+destroyer.name = "Destroyer"
+print(destroyer.name)
+print(destroyer.position)
 /*:
  Try to print `weapon` on `falcon`. Why doesn't this work? Provide your answer in a comment or a print statement below, and remove any code you added that doesn't compile.
  */
